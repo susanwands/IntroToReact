@@ -159,14 +159,14 @@
         }
 
         drinkDetail = (drinkId) => {
-          var url = 'http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + drinkId;
+          var url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + drinkId;
           return fetch(url)
           .then((response) => response.json())
           .then((myJson) => {this.setState({current: myJson.drinks})})
         }
 
         drinkRandom = () => {
-          return fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
+          return fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
             .then((response) => response.json())
             .then((myJson) => myJson.drinks[0])
         }
@@ -181,7 +181,7 @@
         }
 
         searchList = (text) => {
-          var url = 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + text;
+          var url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + text;
           return fetch(url)
           .then((response) => response.json())
           .then((myJson) => {this.setState({listDisplay: myJson.drinks})})
