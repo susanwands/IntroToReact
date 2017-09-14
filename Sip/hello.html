@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Siply</title>
+    <link rel="stylesheet" href="theme.css">
+  </head>
+  <body>
+    <header></header>
+    <div id="root">
+
+    </div>
+    <footer></footer>
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script type="text/babel">
+     
+     const Drink = (props) => {
+       return(
+         <div className="drink">
+          <img src="sample.jpg"/>
+          <h2>{props.drink.strDrink}</h2>
+         
+         </div>
+       );
+     }
+      
+      const Recipe = (props) => {
+        return(
+          <div>
+          <img src="sample.jpg"/>
+          <h2>{props.name}</h2>
+          <h3>Instructions</h3>
+          <p>Awesome instructions on how to make this thing...</p>
+         </div>
+        )
+      }
+
+      const Refresh = (props) =>{
+        return(
+          <div>
+            <button type="button" onClick={props.refresh}>Refresh</button>
+          </div>
+        )
+      }
+
+      class App extends React.Component {
+        constructor(){
+          super();
+          this.state ={
+            drink:"",
+            name: "Old Fashioned",
+          };
+        }
+
+        drinkRandom = () => {
+          return fetch('http://www.thecocktaildb.com/api/json/v1/1/random.php')
+            .then((response) => response.json())
+            .then((myJson) => {this.setState({drink: myJson.drinks[0]})})
+        }
+
+        componentDidMount(){
+          this.drinkRandom();
+        }
+
+        render(){
+          return(
+            <div>
+              <Refresh refresh={this.drinkRandom}/>
+              <Drink drink={this.state.drink}/>
+              <Recipe name ={this.state.name}/>
+              <p>hello there</p>
+            </div>
+           
+          )
+        }
+      }
+
+      ReactDOM.render(
+        <App/>,
+        document.getElementById('root')
+      );
+
+    </script>
+  </body>
+</html>
