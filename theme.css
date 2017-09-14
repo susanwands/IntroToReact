@@ -1,0 +1,100 @@
+body{
+   
+    font-family: 'Didact Gothic', sans-serif;
+   
+    
+}
+
+h1, h2, h3{
+   /* font-family: 'Great Vibes', cursive;*/
+    font-family: 'Allura', cursive;
+   /* font-family: 'Italianno', cursive;*/
+}
+
+header, footer{
+    background-color: lightgray;
+}
+
+header{
+    min-height: 500px;
+    background-image: url(images/black-and-white-alcohol-bar-drinks.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header h1{
+    color: #05EFE3;
+    font-size: 80px;
+    margin:0px 50px;
+    padding-top: 30px;
+}
+
+.drink{
+    margin: 10px 0;
+    padding: 20px;
+    background-color: rgba(5,239,227,.1);
+  
+}
+.drink .blurb {
+    margin-top: 30px;
+}
+
+.drink img{
+    min-width: 240px;
+    min-height: 200px;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.close-recipe{
+    float: right;
+    background-color: #05EFE3;
+    margin-bottom: 5px;
+}
+
+.recipe{
+    margin: 80px;
+    padding: 25px;
+    border: 5px solid lightgray;
+}
+
+.recipe img{
+    min-width: 300px;
+    max-width: 500px;
+    min-height: auto;
+    max-height: 500px;
+    padding: 0;
+    margin: 0 25px 25px 25px;
+    border: 2px solid lightgray;
+}
+
+.recipe h2{
+    font-size: 4em;
+    color: #05EFE3;
+
+}
+
+.recipe h3{
+    font-size: 2.5em;
+}
+.search{
+    margin-top: 10px;
+    padding:20px;
+    background-color:lightgray;
+    
+}
+.search input{
+    margin-right:20px;
+    
+}
+
+.search .btn{
+    background-color: #05EFE3;
+    
+}
+
+footer p{
+    margin-left:20px;
+    padding: 10px;
+}
+
