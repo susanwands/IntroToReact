@@ -46,6 +46,10 @@ header h1{
     max-width: 300px;
 }
 
+.drink a :hover{
+   text-decoration:underline;
+   color: lightgray;
+}
 .close-recipe{
     float: right;
     background-color: #05EFE3;
