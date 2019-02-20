@@ -25,5 +25,5 @@ Some resources for learning more:
   •	Pluralsite has a React Path with progressive lessons - the intro lesson was very good for this.
   
   
-
+See the final product : https://susanwands.github.io/IntroToReact/
   
